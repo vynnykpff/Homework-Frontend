@@ -12,19 +12,19 @@ export function calcValue() {
 
 	switch (selection.value) {
 		case '+':
-			result.placeholder = +numOne + +numTwo;
+			result.placeholder =  Math.floor((+numOne + +numTwo) * 100) / 100;
 			break;
 		case '-':
-			result.placeholder = +numOne - +numTwo;
+			result.placeholder =  Math.floor((+numOne - +numTwo) * 100) / 100;
 			break;
 		case '*':
-			result.placeholder = +numOne * +numTwo;
+			result.placeholder = Math.floor((+numOne * +numTwo) * 100) / 100;
 			break;
 		case '/':
 			result.placeholder = Math.floor((+numOne / +numTwo) * 100) / 100;
 			break;
 		case 'n^n':
-			result.placeholder = Math.pow(+numOne, +numTwo);
+			result.placeholder = Math.floor(Math.pow(+numOne, +numTwo) * 100) / 100;
 			break;
 		case 'sqrt':
 			result.placeholder = Math.floor(Math.sqrt(+numOne) * 100) / 100;
